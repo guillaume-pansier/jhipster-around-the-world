@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { JhiEventManager } from 'ng-jhipster';
+import { ConfigOption } from '@ngui/map';
 
 import { Account, LoginModalService, Principal } from '../shared';
 
@@ -15,6 +16,9 @@ import { Account, LoginModalService, Principal } from '../shared';
 export class HomeComponent implements OnInit {
     account: Account;
     modalRef: NgbModalRef;
+    mapProps: any = {
+        center: 'some-invalid-location',
+      };
 
     constructor(
         private principal: Principal,

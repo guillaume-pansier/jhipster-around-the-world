@@ -3,9 +3,16 @@
     <router-outlet name="navbar"></router-outlet>
 </div>
 <div class="container-fluid">
-    <div class="card jh-card">
-        <router-outlet></router-outlet>
+        <div class="card jh-card">
+            <div class="row">
+                <div class="col-md-9">
+                    <router-outlet></router-outlet>
+                </div>
+                <div class="col-md-3">
+                    <router-outlet name="other"></router-outlet>
+                </div>
+            </div>
         <router-outlet name="popup"></router-outlet>
-    </div>
+        </div>
     <jhi-footer></jhi-footer>
 </div>
