@@ -1,0 +1,29 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "tripName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "TripStatus",
+            "fieldValues": "DONE,PLANNED"
+        },
+        {
+            "fieldName": "tripPathId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "countryPaths",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20171112134018",
+    "entityTableName": "trip",
+    "dto": "mapstruct",
+    "pagination": "infinite-scroll",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false
+}

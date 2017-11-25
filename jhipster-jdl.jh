@@ -1,0 +1,36 @@
+entity InterestPoint {
+	name String
+    coordinates String
+}
+
+entity Country {
+	countryName String
+    isoCode String
+    pathSvgFormat String
+}
+
+entity CountryPath {
+	isoCode String
+    //TODO Change
+	interestPoints String
+}
+
+
+enum TripStatus {
+	DONE, PLANNED
+}
+
+entity Trip {
+	tripName String
+    status TripStatus
+    tripPathId String
+	countryPaths String
+}
+
+// Set pagination options
+paginate Trip with infinite-scroll
+
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl except CountryPath, Country

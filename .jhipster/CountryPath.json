@@ -1,0 +1,20 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "isoCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "interestPoints",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20171112134017",
+    "entityTableName": "country_path",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}

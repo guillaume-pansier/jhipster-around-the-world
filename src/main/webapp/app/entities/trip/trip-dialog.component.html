@@ -1,0 +1,47 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myTripLabel">Create or edit a Trip</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!trip.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="trip.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" for="field_tripName">Trip Name</label>
+            <input type="text" class="form-control" name="tripName" id="field_tripName"
+                [(ngModel)]="trip.tripName"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" for="field_status">Status</label>
+            <select class="form-control" name="status" [(ngModel)]="trip.status" id="field_status" >
+                <option value="DONE">DONE</option>
+                <option value="PLANNED">PLANNED</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" for="field_tripPathId">Trip Path Id</label>
+            <input type="text" class="form-control" name="tripPathId" id="field_tripPathId"
+                [(ngModel)]="trip.tripPathId"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" for="field_countryPaths">Country Paths</label>
+            <input type="text" class="form-control" name="countryPaths" id="field_countryPaths"
+                [(ngModel)]="trip.countryPaths"  />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>
