@@ -6,7 +6,7 @@ import { Ng2Webstorage } from 'ng2-webstorage';
 
 import { AroundTheWorldSharedModule, UserRouteAccessService } from './shared';
 import { AroundTheWorldHomeModule } from './home/home.module';
-import { AroundTheWorldHomeNavModule } from './homeNav/home-nav.module';
+import { AroundTheWorldHomeNavModule } from './home-nav/home-nav.module';
 import { AroundTheWorldAdminModule } from './admin/admin.module';
 import { AroundTheWorldAccountModule } from './account/account.module';
 import { AroundTheWorldEntityModule } from './entities/entity.module';
